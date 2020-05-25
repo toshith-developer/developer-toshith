@@ -7,3 +7,5 @@ smartcom.js contains smart commands with wildcard entries
 commands.js contains normal commands
 newcomm.js is a form to email new suggested commands to add to summer
 style.css and index.html are interdependent both in terms of css code and completion.
+RE:
+For Project beta shortlisting ---  https://github.com/toshith-developer/SummerAI/tree/master
