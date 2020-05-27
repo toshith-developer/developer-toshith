@@ -1,5 +1,3 @@
-  const summer = new Artyom();
-
   var commandHello = {
     indexes:["hello","hey","hi"],
     action:function(){
@@ -21,7 +19,7 @@
       {
 	description:"Greetings",
 	smart:false,
-	indexes:["good morning","good evening","good afternoon","good night","good work","you are hot","play songs","google drive","leave it","hey summer","I'm fine","what about you","what have you been doing","plans like","what's going on","what's up","ok","at commands","who are you"],
+	indexes:["good morning","good evening","good afternoon","good night","good work","you are hot","leave it","hey summer","I'm fine","what about you","what have you been doing","plans like","what's going on","what's up","ok","at commands","who are you"],
 	action:function(i){
     
     if(i==0){
@@ -42,7 +40,7 @@
     }
     
     else if(i==4){
-	    summer.say("thank you . I'll always try to impress you");
+	    summer.say("thank you");
     }
     
     else if(i==5){
@@ -53,59 +51,50 @@
       var sumrep= this.innerHTML= rep(repl);
       summer.say(sumrep);
     }
-    
+         
     else if(i==6){
-	    summer.say("From where, google drive or spotify");
-    }
-    
-    else if(i==7){
-	    summer.say("ok,   here is a collection of Toshith's songs from google drive");
-	    window.location.href='https://drive.google.com/open?id=1-_Ef0ntchrepZCtFKB6vBq-J_NSmfahK';
-    }
-    
-    else if(i==8){
 	    summer.say("ok");
     }
     
-    else if(i==9){
+    else if(i==7){
       summer.say("Hi,  wassup?")
     }
        
-    else if(i==10){
+    else if(i==8){
       summer.say("I'm pleased to hear that");
     }
     
-    else if(i==11){
+    else if(i==9){
       summer.say("I'm fine");
     }
     
-    else if(i==12){
+    else if(i==10){
       summer.say("Nothing much,   just figuring out some of our" + "plans");
     }
     
-    else if(i==13){
+    else if(i==11){
  	    summer.say("That's a pleasant secret surprise");
     }
     
-    else if(i==14){
+    else if(i==12){
       summer.say("Nothing much");
 	    window.setTimeout(summer.say("Just figuring out some usual stuff about humans"),500);
     }
     
-    else if(i==15){
+    else if(i==13){
       summer.say("Nothing just trying to learn human nature");
     }
     
-    else if(i==16){
+    else if(i==14){
       summer.say("Yup");
     }
     
-    else if(i==17){
+    else if(i==15){
 	    document.getElementById("playlist").innerHTML="<iframe src='newcomm.html' width='70%' height='70%'>";
       summer.say("Please fill in below");
     }
     
-    else if(i==18){
+    else if(i==16){
       summer.say("I am an artificially intelligent program called summer");
       window.setTimeout(summer.say("I was designed by Toshith"),1000);
     }
@@ -176,40 +165,9 @@
           window.setTimeout(summer.say("I won't speak"),500);
           window.stopArtyom();
         }
+
       }
      },
   ];
 
   summer.addCommands(wish);
-
-function startContinuousArtyom(){
-    summer.fatality();
-
-    setTimeout(function(){
-         summer.initialize({
-            lang:"en-GB",
-            continuous:true,
-            listen:true,
-            debug:true,
-            speed:0.9,
-        }).then(function(){
-            console.log("waiting for input");
-        },250);
-    });
-};
-
-  summer.redirectRecognizedTextOutput(function(text,isFinal){
-    var span = document.getElementById('result');
-
-    if(isFinal){
-      span.innerHTML = '';
-    }
-    else {
-      span.innerHTML = text;
-    }
-  });
-
-
-  function stopArtyom(){
-    summer.fatality();
-  }

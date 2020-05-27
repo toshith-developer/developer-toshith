@@ -1,68 +1,26 @@
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="artyom.window.min.js"></script>
-  <script src="artyom.js"></script>
-  <script src="commands.js"></script>
-  <script src="smartcom.js"></script>
-</head>
-<body class="txt">
-  
-<center>
-  <button onclick="startContinuousArtyom()" value="start voice commands" class="button button1"><img src="pictures/mic.png"></button><br> <br>
-
-  <i><u><h1 id="heading"></h1></i></u><br>
-
-
+<body>
 <script>
-  var hour = new Date().getHours();
-  var greet;
-  if(hour < 12){
-    greet="Good Morning";
-  }else if(hour==12){
-    greet="Good noon";
-  }else if(hour < 16){
-    greet="Good Afternoon";
-  }else if(hour >= 16){
-    greet="Good Evening"
+var page=["summer.html","summer_comp.html","summer1.html"]
+  function ge(page){
+    return page[Math.floor(Math.random()*page.length)];
   }
-
-  var t = 0;
-  var txt = greet + ", I'm Summer";
-  var speed = 150;
-  function typeWriter() {
-  if (t < txt.length) {
-    document.getElementById("heading").innerHTML += txt.charAt(t);
-    t++;
-    setTimeout(typeWriter, speed);
-    };
+  var lo = this.innerHTML= ge(page);
+ 
+var pag=["summer.html","summer_comp.html","summer_coffee.html","summer1.html"]
+  function gea(pag){
+    return pag[Math.floor(Math.random()*pag.length)];
   }
+  var loa = this.innerHTML = gea(pag);
 
-  setTimeout(typeWriter, 1000);
-
-  summer.say(greet);
-  window.setTimeout(summer.say("I'm summer, Your artificially intelligent friend"),1500);
-
+    if (navigator.appVersion.indexOf("Win") != -1){
+      window.location.href = lo;
+    }
+    if (navigator.appVersion.indexOf("Linux") != -1){
+      window.location.href= lo
+    }
+    else{
+      window.location.href = loa;
+    }    
 </script>
-
-  <button onclick="stopArtyom()" value="stop listening" class="button button1"><img src="pictures/mute.png"></button><br>
-
-<br><br>
-
-  <script>
-    window.startContinuousArtyom();
-    </script>
-  <span id="result"></span>
- <br>
- <p id="demo"></p>
- <p id="playlist"></p>
-
-  </center>
-
-</body>
-
-</html>

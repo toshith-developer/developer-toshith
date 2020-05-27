@@ -121,10 +121,10 @@ var Artyom = (function () {
          */
         this.ArtyomVoice = {
             default: false,
-            lang: "en-GB",
+            lang: "en_GB",
             localService: false,
             name: "Google UK English Female",
-            voiceURI: "Google UK English Female"
+            voiceURI: "Google UK English Female",
         };
     }
     /**
