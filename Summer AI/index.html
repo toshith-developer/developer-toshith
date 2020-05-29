@@ -14,13 +14,13 @@ var pag=["summer.html","summer_comp.html","summer_coffee.html","summer1.html"]
   }
   var loa = this.innerHTML = gea(pag);
 
-    if (navigator.appVersion.indexOf("Win") != -1){
+    if (navigator.appVersion.indexOf("Win") > -1){
       window.location.href = lo;
     }
-    if (navigator.appVersion.indexOf("Linux") != -1){
+    else if (navigator.appVersion.indexOf("Linux") > -1){
       window.location.href= lo
     }
-    else{
+    else if(navigator.appVersion.indexOf("android") > -1){
       window.location.href = loa;
     }    
 </script>
