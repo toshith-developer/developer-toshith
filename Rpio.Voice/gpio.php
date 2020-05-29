@@ -15,7 +15,7 @@ shell_exec("gpio -g mode 20 pwm");
   <style>
 
     body {
-        background-image:url('style/pictures/bag.jpg');
+        background-image:url('bag.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
